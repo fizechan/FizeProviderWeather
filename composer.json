@@ -1,0 +1,25 @@
+{
+    "name": "fize/third-rongcloud",
+    "description": "融云接口API，与官方文档同步实现。",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "FizeChan",
+            "email": "chenfengzhan@qq.com"
+        }
+    ],
+    "require": {
+		"php": ">=5.4.0",
+        "fize/net": "*@dev",
+        "fize/crypt": "*@dev",
+        "fize/math": "*@dev",
+        "sc0vu/web3.php": "*",
+        "kornrunner/keccak": "*",
+        "ccxt/ccxt": "*"
+    },
+	"autoload": {
+        "psr-4": {
+            "fize\\third\\rongcloud\\": "src"
+        }
+    }
+}
