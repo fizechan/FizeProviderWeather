@@ -1,29 +1,29 @@
 {
-  "name": "fize/provider-weather",
-  "description": "天气查询库",
-  "license": "MIT",
   "authors": [
     {
       "name": "FizeChan",
       "email": "chenfengzhan@qq.com"
     }
   ],
-  "require": {
-    "php": ">=5.5",
-    "fize/misc": "~0.1",
-    "fize/crypt": "~3.2",
-    "fize/net": "~4.0"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^8.0.0"
-  },
-  "provide": {
-  },
-  "suggest": {
-  },
   "autoload": {
     "psr-4": {
       "fize\\provider\\weather\\": "src"
     }
+  },
+  "description": "天气查询库",
+  "license": "MIT",
+  "name": "fize/provider-weather",
+  "provide": {
+  },
+  "require": {
+    "php": ">=5.5",
+    "fize/misc": "~0.1",
+    "fize/crypt": "~3.2",
+    "fize/net": "~4.2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~9.2.6"
+  },
+  "suggest": {
   }
 }

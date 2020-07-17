@@ -1,6 +1,5 @@
 <?php
 
-
 namespace fize\provider\weather\handler;
 
 use RuntimeException;
@@ -24,12 +23,8 @@ class JuHe extends WeatherHandler
     {
         $city = urlencode($city);
         $key = $this->config['key'];
-        $response = Http::get("http://apis.juhe.cn/simpleWeather/query?city={$city}&key={$key}");
-        if ($response === false) {
-            throw new RuntimeException(Http::getLastErrMsg(), Http::getLastErrCode());
-        }
-
-        $json = Json::decode($response);
+        $content = Http::get("http://apis.juhe.cn/simpleWeather/query?city={$city}&key={$key}");
+        $json = Json::decode($content);
         if (isset($json['error_code']) && $json['error_code']) {
             throw new RuntimeException($json['reason'], (int)$json['error_code']);
         }
@@ -56,12 +51,8 @@ class JuHe extends WeatherHandler
     {
         $city = urlencode($city);
         $key = $this->config['key'];
-        $response = Http::get("http://apis.juhe.cn/simpleWeather/query?city={$city}&key={$key}");
-        if ($response === false) {
-            throw new RuntimeException(Http::getLastErrMsg(), Http::getLastErrCode());
-        }
-
-        $json = Json::decode($response);
+        $content = Http::get("http://apis.juhe.cn/simpleWeather/query?city={$city}&key={$key}");
+        $json = Json::decode($content);
         if (isset($json['error_code']) && $json['error_code']) {
             throw new RuntimeException($json['reason'], (int)$json['error_code']);
         }
