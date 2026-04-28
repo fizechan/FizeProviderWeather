@@ -1,12 +1,11 @@
 <?php
 
-namespace fize\provider\weather\handler;
+namespace Fize\Provider\Weather\Handler;
 
+use Fize\Http\ClientOnce;
+use Fize\Provider\Weather\WeatherHandler;
+use Fize\Provider\Weather\WeatherItem;
 use RuntimeException;
-use fize\net\Http;
-use fize\crypt\Json;
-use fize\provider\weather\WeatherHandler;
-use fize\provider\weather\WeatherItem;
 
 /**
  * 聚合数据
@@ -23,8 +22,9 @@ class JuHe extends WeatherHandler
     {
         $city = urlencode($city);
         $key = $this->config['key'];
-        $content = Http::get("http://apis.juhe.cn/simpleWeather/query?city={$city}&key={$key}");
-        $json = Json::decode($content);
+        $response = ClientOnce::get("http://apis.juhe.cn/simpleWeather/query?city={$city}&key={$key}");
+        $content = $response->getBody()->getContents();
+        $json = json_decode($content);
         if (isset($json['error_code']) && $json['error_code']) {
             throw new RuntimeException($json['reason'], (int)$json['error_code']);
         }
@@ -51,8 +51,9 @@ class JuHe extends WeatherHandler
     {
         $city = urlencode($city);
         $key = $this->config['key'];
-        $content = Http::get("http://apis.juhe.cn/simpleWeather/query?city={$city}&key={$key}");
-        $json = Json::decode($content);
+        $response = ClientOnce::get("http://apis.juhe.cn/simpleWeather/query?city={$city}&key={$key}");
+        $content = $response->getBody()->getContents();
+        $json = json_decode($content);
         if (isset($json['error_code']) && $json['error_code']) {
             throw new RuntimeException($json['reason'], (int)$json['error_code']);
         }

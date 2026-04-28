@@ -2,8 +2,8 @@
 
 namespace handler;
 
-use fize\provider\weather\handler\JuHe;
-use fize\provider\weather\WeatherItem;
+use Fize\Provider\Weather\handler\JuHe;
+use Fize\Provider\Weather\WeatherItem;
 use PHPUnit\Framework\TestCase;
 
 class TestJuHe extends TestCase

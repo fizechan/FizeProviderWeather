@@ -1,7 +1,7 @@
 <?php
 
 
-namespace fize\provider\weather;
+namespace Fize\Provider\Weather;
 
 /**
  * 接口：天气

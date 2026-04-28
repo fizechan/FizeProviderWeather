@@ -1,8 +1,8 @@
 <?php
 
 
-use fize\provider\weather\Weather;
-use fize\provider\weather\WeatherItem;
+use Fize\Provider\Weather\Weather;
+use Fize\Provider\Weather\WeatherItem;
 use PHPUnit\Framework\TestCase;
 
 class TestWeather extends TestCase

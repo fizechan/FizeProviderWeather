@@ -1,6 +1,6 @@
 <?php
 
-namespace fize\provider\weather;
+namespace Fize\Provider\Weather;
 
 /**
  * 天气查询
@@ -21,7 +21,7 @@ class Weather
     public static function getInstance($handler, array $config = [])
     {
         if (empty(self::$handler)) {
-            $class = '\\' . __NAMESPACE__ . '\\handler\\' . $handler;
+            $class = '\\' . __NAMESPACE__ . '\\Handler\\' . $handler;
             self::$handler = new $class($config);
         }
         return self::$handler;
