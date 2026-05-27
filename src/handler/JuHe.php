@@ -24,7 +24,7 @@ class JuHe extends WeatherHandler
         $key = $this->config['key'];
         $response = ClientOnce::get("http://apis.juhe.cn/simpleWeather/query?city={$city}&key={$key}");
         $content = $response->getBody()->getContents();
-        $json = json_decode($content);
+        $json = json_decode($content, true);
         if (isset($json['error_code']) && $json['error_code']) {
             throw new RuntimeException($json['reason'], (int)$json['error_code']);
         }
@@ -53,7 +53,7 @@ class JuHe extends WeatherHandler
         $key = $this->config['key'];
         $response = ClientOnce::get("http://apis.juhe.cn/simpleWeather/query?city={$city}&key={$key}");
         $content = $response->getBody()->getContents();
-        $json = json_decode($content);
+        $json = json_decode($content, true);
         if (isset($json['error_code']) && $json['error_code']) {
             throw new RuntimeException($json['reason'], (int)$json['error_code']);
         }
