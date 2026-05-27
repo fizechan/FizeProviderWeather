@@ -1,6 +1,6 @@
 <?php
 
-namespace handler;
+namespace Handler;
 
 use Fize\Provider\Weather\handler\JuHe;
 use Fize\Provider\Weather\WeatherItem;
