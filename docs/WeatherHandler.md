@@ -144,7 +144,7 @@ $api = Weather::getInstance('Example', [
 或：
 
 ```php
-use Fize\Provider\Weather\Handler2\Example;
+use Fize\Provider\Weather\Handler\Example;
 
 $api = new Example(['token' => '自定义配置']);
 ```

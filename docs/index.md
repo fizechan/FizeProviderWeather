@@ -172,7 +172,7 @@ foreach ($days as $day) {
 也可以不经过门面，直接实例化处理器：
 
 ```php
-use Fize\Provider\Weather\Handler2\JuHe;
+use Fize\Provider\Weather\Handler\JuHe;
 
 $juhe = new JuHe(['key' => '你的AppKey']);
 $item = $juhe->getRealtime('北京');

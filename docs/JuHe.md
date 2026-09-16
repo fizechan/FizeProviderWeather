@@ -27,7 +27,7 @@
 构造函数继承自基类，使用配置数组：
 
 ```php
-$juhe = new \Fize\Provider\Weather\Handler2\JuHe([
+$juhe = new \Fize\Provider\Weather\Handler\JuHe([
     'key' => '你的AppKey',
 ]);
 ```
@@ -145,7 +145,7 @@ $days = $api->getFuture('厦门');
 直接实例化（可同时持有不同 Key，也不受门面单例限制）：
 
 ```php
-use Fize\Provider\Weather\Handler2\JuHe;
+use Fize\Provider\Weather\Handler\JuHe;
 
 $api = new JuHe(['key' => '你的AppKey']);
 $now = $api->getRealtime('110000'); // 也可用城市 ID（以聚合数据支持为准）
@@ -154,7 +154,7 @@ $now = $api->getRealtime('110000'); // 也可用城市 ID（以聚合数据支�
 捕获接口错误：
 
 ```php
-use Fize\Provider\Weather\Handler2\JuHe;
+use Fize\Provider\Weather\Handler\JuHe;
 use RuntimeException;
 
 $api = new JuHe(['key' => '你的AppKey']);

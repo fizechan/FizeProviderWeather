@@ -85,7 +85,7 @@ $b = Weather::getInstance('Other', ['key' => 'key-b']);
 正确做法：一个进程只绑定一个处理器；若必须直接使用某实现，请 `new` 该处理器，不要走门面。
 
 ```php
-use Fize\Provider\Weather\Handler2\JuHe;
+use Fize\Provider\Weather\Handler\JuHe;
 
 $juhe = new JuHe(['key' => '你的AppKey']);
 ```
