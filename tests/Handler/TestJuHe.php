@@ -2,7 +2,7 @@
 
 namespace Handler;
 
-use Fize\Provider\Weather\handler\JuHe;
+use Fize\Provider\Weather\Handler2\JuHe;
 use Fize\Provider\Weather\WeatherItem;
 use PHPUnit\Framework\TestCase;
 
